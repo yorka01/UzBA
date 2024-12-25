@@ -1,0 +1,124 @@
+/* Базовые стили для страницы */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif; /* Современный шрифт */
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Градиент фона */
+    color: #ffffff;
+    overflow: hidden; /* Убирает прокрутку, если контент помещается */
+}
+
+/* Контейнер для формы */
+.registration-container, .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Карточка формы */
+.registration-form, .profile-card {
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый */
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Глубокая тень */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Эффект размытия заднего фона */
+}
+
+/* Заголовок */
+.registration-form h1, .profile-card h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #f9a825;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Тень текста */
+}
+
+/* Метки */
+.registration-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #f1f1f1;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* Поля ввода */
+.registration-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Прозрачная рамка */
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.registration-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Полупрозрачный текст placeholder */
+}
+
+/* Фокус на полях */
+.registration-form input:focus {
+    outline: none;
+    border-color: #f9a825; /* Желтый цвет при фокусе */
+    box-shadow: 0 0 10px rgba(249, 168, 37, 0.8); /* Светящийся эффект */
+}
+
+/* Кнопка */
+.registration-form button, .profile-card button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #f9a825, #ffcc00); /* Градиент кнопки */
+    color: #121212;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.registration-form button:hover, .profile-card button:hover {
+    background: linear-gradient(90deg, #ffcc00, #f9a825); /* Инверсия градиента */
+    transform: translateY(-3px); /* Поднятие кнопки */
+}
+
+/* Анимация при клике */
+.registration-form button:active, .profile-card button:active {
+    transform: translateY(1px); /* Возврат кнопки */
+}
+
+/* Карточка профиля */
+.profile-card p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.profile-card p strong {
+    color: #f9a825;
+}
+
+/* Ссылки (например, "Забыли пароль?") */
+.registration-form a, .profile-card a {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.registration-form a:hover, .profile-card a:hover {
+    color: #f9a825; /* Желтый при наведении */
+}
